@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Price Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Predict Price per Module</h2>
+        <form method="POST">
+            {% for col, options in yes_no_cols.items() %}
+                <label>{{ col.replace("_", " ") | capitalize }}:</label>
+                <select name="{{ col }}">
+                    {% for opt in options %}
+                        <option value="{{ opt }}">{{ opt }}</option>
+                    {% endfor %}
+                </select>
+            {% endfor %}
+
+            <label>Customer:</label>
+            <select name="customer">
+                {% for opt in customer_values %}
+                    <option value="{{ opt }}">{{ opt }}</option>
+                {% endfor %}
+            </select>
+
+            {% for col, options in categorical_cols.items() %}
+                <label>{{ col.replace("_", " ") | capitalize }}:</label>
+                <select name="{{ col }}">
+                    {% for opt in options %}
+                        <option value="{{ opt }}">{{ opt }}</option>
+                    {% endfor %}
+                </select>
+            {% endfor %}
+
+            {% for col in continuous_features %}
+                {% if col == "days_from_first" %}
+                    <label>Date of interest:</label>
+                    <input type="date" name="days_from_first" min="{{ min_date }}" max="{{ max_date }}" required>
+                {% else %}
+                    <label>{{ col.replace("_", " ") | capitalize }}:</label>
+                    <input type="number" name="{{ col }}" min="{{ min_power }}" max="{{ max_power }}" step="0.01" required>
+                {% endif %}
+            {% endfor %}
+
+           <label>Choose Model:</label>
+            <select name="model_choice">
+                <option value="xgb" {% if selected_model == "xgb" %}selected{% endif %}>XGBoost</option>
+                <!--<option value="dense" {% if selected_model == "dense" %}selected{% endif %}>Dense (Keras)</option>-->
+            </select>
+            <input type="submit" value="Predict">
+        </form>
+
+        {% if prediction is not none %}
+        <h3>Predicted Price per Module: {{ prediction }}$</h3>
+        {% endif %}
+    </div>
+</body>
+</html>

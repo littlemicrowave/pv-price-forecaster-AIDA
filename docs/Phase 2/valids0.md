@@ -1,0 +1,32 @@
+|                                 |        0 |
+|:--------------------------------|---------:|
+| installation_date               | 100      |
+| state                           | 100      |
+| customer_segment                | 100      |
+| expansion_system                | 100      |
+| multiple_phase_system           | 100      |
+| utility_service_territory       | 100      |
+| city                            |  99.9999 |
+| system_size_DC                  |  99.9557 |
+| additional_inverters            |  99.9076 |
+| additional_modules              |  99.9076 |
+| DC_optimizer                    |  99.8922 |
+| self_installed                  |  99.8555 |
+| module_quantity_1               |  99.6498 |
+| micro_inverter_1                |  99.5233 |
+| installer_name                  |  99.4281 |
+| built_in_meter_inverter_1       |  99.3496 |
+| inverter_manufacturer_1         |  99.3259 |
+| technology_type                 |  98.8478 |
+| output_capacity_inverter_1      |  98.5336 |
+| rebate_or_grant                 |  95.7646 |
+| module_manufacturer_1           |  95.0466 |
+| bifacial_module_1               |  94.8066 |
+| technology_module_1             |  94.6879 |
+| BIPV_module_1                   |  94.6853 |
+| module_model_1                  |  94.0044 |
+| third_party_owned               |  91.7861 |
+| tracking                        |  90.0095 |
+| total_installed_price           |  81.7781 |
+| solar_storage_hybrid_inverter_1 |  81.7279 |
+| ground_mounted                  |  75.946  |
