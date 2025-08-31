@@ -4,7 +4,7 @@ First of all it is important to know what is a PV or photovoltaic system. A phot
 
 ![PV system](PV_system.png)
 
-The main business objectives of the current feature are to get visualization, analysis and prediction of the trends in solar panel system prices and sizes (the total rated direct-current (DC) output of the module arrays at standard test conditions.) throughout the time series for both consumer and business customers, to identify what can influence pricing and sizing, to get data insights, relations, dependicies, to forecast and predict future pricing and size of installations. Thus providing assistance to the energy companies, installers, and other stakeholders in understanding the current and potential future market dynamics of solar panel installations. Also it will be possible to identify how PV systems have developed throughout the years, maybe it will be the most effective energy source in the future, who knows.
+The main business objectives of project are to get visualization, analysis and prediction of the trends in solar panel system prices and sizes (the total rated direct-current (DC) output of the module arrays at standard test conditions.) throughout the time series for both consumer and business customers, to identify what can influence pricing and sizing, to get data insights, relations, dependicies, to forecast and predict future pricing and size of installations. Thus providing assistance to the energy companies, installers, and other stakeholders in understanding the current and potential future market dynamics of solar panel installations. Also it will be possible to identify how PV systems have developed throughout the years, maybe it will be the most effective energy source in the future, who knows.
 
 ## Current situation
 A the starting point we have a dataset containing 1000000 rows of data and 78 columns. Missing data are coded in the database as -9999. The main variables to point out are (explanations are taken from supporting pdf file for this dataset):  
@@ -91,7 +91,7 @@ difficulties downloading or opening the file, please email Naïm Darghouth (ndar
 4.  To build regressive models that can predict system price based on system size, customer segment, installation date, and amount of rebates
 5.  Build model capable of prediction of price based on features mentioned in point above and in addition to them installation component data  
 
-Also we will need to interpret modeling results, feature importances, and sensitivity, and compare algorithmic models with deep learning models.
+Also it is needed to interpret modeling results, feature importances, and sensitivity, and compare algorithmic models with deep learning models.
 
 **Tools:** sklearn, tensorflow, numpy, skforecast  
 **Methods:** We will try different regression models starting with baseline models such as ElasticNet, Gradient Boosting, Decision tree regressor, we will definitely try to use ARIMA, and in addition deep learning including RNNs, such as LSTM, biLSTM, GRU. Deep learning is very good to consider for final model which will utilize also installation component features with high cardinality.
@@ -104,7 +104,7 @@ Also we will need to interpret modeling results, feature importances, and sensit
 3.  Develop predictive models that can forecast future prices and system sizes based on time series for different customer groups and in general
 4.  Ultimate goal is to develop more robust model capabale of price forecating considering features above and additionally system components, that will provide an huge value for the stakeholders, since they will be able to plan their investments and it can assist in strategical decision making process for the business.  
 
-We won't consider following things but it can be a potential for the imporvement:  
+I won't consider following things but it can be a potential for the imporvement:  
 * Inflation and economic conditions
 * Raw material prices
 * Technological advancements in solar panels and batteries
